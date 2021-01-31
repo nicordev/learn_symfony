@@ -1,9 +1,11 @@
 # Custom Api
 
-## PHP
+## Requirements
 
 ```bash
 sudo apt-get install php8.0-mbstring
+sudo apt-get install php8.0-pdo-pgsql
+sudo apt-get install postgresql-client-common
 ```
 
 ## Packages
@@ -17,5 +19,6 @@ composer require doctrine/annotations
 composer require symfony/maker-bundle --dev
 # serializer
 composer require symfony/serializer
+# ORM Doctrine
+composer require orm
 ```
-

@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+    database:
+        image: postgres:latest
+        ports:
+        - 5441:5432
+        environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+        - POSTGRES_DB=custom_api
+#        volumes:
+#            - ./database:/var/lib/postgresql/data
+#        networks:
+#            custom_api: ~
+#volumes:
+#    database: ~
+#
+#networks:
+#    custom_api: ~
