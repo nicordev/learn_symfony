@@ -13,12 +13,12 @@ class StudentControllerTest extends WebTestCase
      */
     public function testGetCollection() {
         $client = static::createClient();
-
         $crawler = $client->request('GET', '/students');
         $response = $client->getResponse();
 
         self::assertEquals(200, $response->getStatusCode());
         $responseContent = $response->getContent();
-        self::assertStringContainsString('Welcome to your new controller!', $responseContent);
+        $data = json_decode($responseContent);
+        dd($data);
     }
 }

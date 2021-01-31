@@ -2,18 +2,18 @@
 
 namespace App\Controller;
 
+use App\Repository\StudentRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class StudentController extends AbstractController
 {
-    #[Route('/students', name: 'student-index')]
-    public function index(): Response
+    #[Route('/students', name: 'student-list')]
+    public function list(StudentRepository $studentRepository): Response
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/StudentController.php',
-        ]);
+        $students = $studentRepository->findAll();
+
+        return $this->json(json_encode($students));
     }
 }

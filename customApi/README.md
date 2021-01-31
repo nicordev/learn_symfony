@@ -32,7 +32,7 @@ composer require orm
 composer require orm-fixtures --dev
 
 # Serializer
-composer require symfony/serializer
+composer require symfony/serializer-pack
 ```
 
 ## Installation
