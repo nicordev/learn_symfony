@@ -17,7 +17,7 @@ wget https://get.symfony.com/cli/installer -O - | bash
 ## Packages
 
 ```bash
-# Tests
+# Test
 composer require --dev phpunit
 composer require --dev symfony/browser-kit symfony/css-selector
 
@@ -25,11 +25,14 @@ composer require --dev symfony/browser-kit symfony/css-selector
 composer require doctrine/annotations
 composer require symfony/maker-bundle --dev
 
-# serializer
-composer require symfony/serializer
-
 # ORM Doctrine
 composer require orm
+
+# Fixtures
+composer require orm-fixtures --dev
+
+# Serializer
+composer require symfony/serializer
 ```
 
 ## Installation

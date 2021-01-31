@@ -6,6 +6,13 @@ help:
 test: ## Run the test suite
 	php bin/phpunit
 
+load-fixtures:
+	php bin/console doctrine:fixtures:load --quiet
+	@echo "\033[32mFixtures loaded.\033[0m"
+
+update-database:
+	php bin/console doctrine:schema:update --force
+
 install: ## Install packages
 	composer install
 
@@ -20,10 +27,10 @@ psql: ## Open psql in the database container
 	docker exec -ti customapi_database_1 psql -U postgres -W
 
 unit-test: ## Create a unit testing class
-	symfony console make:unit-test
+	php bin/console make:unit-test
 
 functional-test: ## Create a functional testing class
-	symfony console make:functional-test
+	php bin/console make:functional-test
 
 controller: ## Create a controller
-	symfony console make:controller
+	php bin/console make:controller
