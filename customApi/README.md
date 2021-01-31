@@ -12,7 +12,7 @@ sudo apt-get install postgresql-client-common
 
 ```bash
 # Tests
-composer require --dev symfony/phpunit-bridge
+composer require --dev phpunit
 composer require --dev symfony/browser-kit symfony/css-selector
 # Maker bundle
 composer require doctrine/annotations

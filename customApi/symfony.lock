@@ -271,6 +271,9 @@
     "symfony/string": {
         "version": "v5.2.2"
     },
+    "symfony/test-pack": {
+        "version": "v1.0.7"
+    },
     "symfony/var-dumper": {
         "version": "v5.2.2"
     },
