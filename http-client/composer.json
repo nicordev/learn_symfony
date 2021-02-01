@@ -1,0 +1,12 @@
+{
+    "name": "nicolas/http-client",
+    "require": {
+        "symfony/http-client": "^5.2"
+    },
+    "authors": [
+        {
+            "name": "Nicolas Renvoisé",
+            "email": "n.renvoise@ubitransport.com"
+        }
+    ]
+}
