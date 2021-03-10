@@ -34,6 +34,11 @@ class Child
      */
     private $topicDays;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isAwesome;
+
     public function __construct()
     {
         $this->topicDays = new ArrayCollection();
@@ -94,6 +99,18 @@ class Child
                 $topicDay->setChild(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getIsAwesome(): ?bool
+    {
+        return $this->isAwesome;
+    }
+
+    public function setIsAwesome(bool $isAwesome): self
+    {
+        $this->isAwesome = $isAwesome;
 
         return $this;
     }
