@@ -28,6 +28,6 @@ class CustomerBasketConverter
             'customer' => $customer,
             'basket' => $basket,
             'fruits' => $fruits
-        ]
+        ];
     }
 }

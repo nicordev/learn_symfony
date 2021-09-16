@@ -19,19 +19,37 @@ $normalizers = [new ObjectNormalizer(), new ArrayDenormalizer()];
 
 $serializer = new Serializer($normalizers, $encoders);
 
-$customerCsv = file_get_contents(__DIR__.'/data/customers.csv');
+//
+// Serialization
+//
 
-$customers = $serializer->deserialize($customerCsv, Customer::class.'[]', 'csv');
+$fruits = [
+    (new Fruit())->setName('apple')->setCount(3),
+    (new Fruit())->setName('peach')->setCount(3),
+    (new Fruit())->setName('cherry')->setCount(3),
+];
 
-var_dump($customers);
+$csv = $serializer->serialize($fruits, 'csv');
 
-// Need to have getter and setter to deserialize
-$customerBaskets = $serializer->deserialize($customerCsv, CustomerBasketDto::class.'[]', 'csv');
+var_dump($csv);
 
-var_dump($customerBaskets);
+//
+// Deserialization
+//
 
-$customerBasketConverter = new CustomerBasketConverter();
+// $customerCsv = file_get_contents(__DIR__.'/data/customers.csv');
 
-foreach ($customerBaskets as $customerBasket) {
-    var_dump($customerBasketConverter->convertDtoToEntities($customerBasket));
-}
+// $customers = $serializer->deserialize($customerCsv, Customer::class.'[]', 'csv');
+
+// var_dump($customers);
+
+// // Need to have getter and setter to deserialize
+// $customerBaskets = $serializer->deserialize($customerCsv, CustomerBasketDto::class.'[]', 'csv');
+
+// var_dump($customerBaskets);
+
+// $customerBasketConverter = new CustomerBasketConverter();
+
+// foreach ($customerBaskets as $customerBasket) {
+//     var_dump($customerBasketConverter->convertDtoToEntities($customerBasket));
+// }
