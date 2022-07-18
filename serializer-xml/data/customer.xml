@@ -1,0 +1,14 @@
+<Customer>
+    <FirstName>Sarah</FirstName>
+    <LastName>Croche</LastName>
+    <Email>sarah@croche.com</Email>
+    <Basket>
+        <ItemsCount>4</ItemsCount>
+        <Fruits put-attribute-here="to get the class?">
+            <Fruit>
+                <Name>Apple</Name>
+                <Count>4</Count>
+            </Fruit>
+        </Fruits>
+    </Basket>
+</Customer>

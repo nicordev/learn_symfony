@@ -1,0 +1,12 @@
+<Customers>
+    <Customer>
+        <FirstName>Sarah</FirstName>
+        <LastName>Croche</LastName>
+        <Email>sarah@croche.com</Email>
+    </Customer>
+    <Customer>
+        <FirstName>Jim</FirstName>
+        <LastName>Nastique</LastName>
+        <Email>jim@nastique.com</Email>
+    </Customer>
+</Customers>

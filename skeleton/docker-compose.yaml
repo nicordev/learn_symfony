@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+    database:
+        image: postgres:latest
+        container_name: skeleton_database
+        ports:
+        - 8732:5432
+        volumes:
+        - ./database:/var/lib/postgresql/data
+        environment:
+        - POSTGRES_USER=skeleton_user
+        - POSTGRES_PASSWORD=skeleton_password
+        - POSTGRES_DB=skeleton_db
+
+volumes:
+    database: ~
